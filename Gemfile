@@ -19,7 +19,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
+group :development do
   gem 'byebug'
   gem 'sqlite3'
   gem 'web-console'
