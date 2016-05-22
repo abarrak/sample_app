@@ -1,3 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# stub
+jack:
+  name: jack 
+  email: jack@twitter.com
+  password_digest: <%= User.digest '123456' %>
