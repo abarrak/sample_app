@@ -3,6 +3,7 @@ require 'test_helper'
 class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   def setup
     @user = users :jack
+    @other_user = users(:mallory)
   end
 
   test "micropost interface" do
