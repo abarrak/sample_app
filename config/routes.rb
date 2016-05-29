@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
   # users resource routes
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   get 'signup' => 'users#new'
 
   # sessions name routes
@@ -26,4 +30,7 @@ Rails.application.routes.draw do
 
   # microposts routes
   resources :microposts, only: [:create, :destroy]
+
+  # following routes
+  resources :relationships, only: [:create, :destroy]
 end
